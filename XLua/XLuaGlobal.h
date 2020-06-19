@@ -2,6 +2,7 @@
 #define XLUA_GLOBAL_H_
 
 #include <list>
+#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
 #include <hash_map>
 
 #include "Lua/lua.hpp"

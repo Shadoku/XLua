@@ -1,0 +1,9 @@
+Extensions/xlua.mfx
+Extensions/xlua.map
+XLua/.vs/
+*.obj
+XLua/Debug/
+XLua/Release/
+XLua-MMFI/.vs/
+XLua-MMFI/Debug/
+XLua-MMFI/Release/
