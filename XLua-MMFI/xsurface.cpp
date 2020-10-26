@@ -1,5 +1,6 @@
 #include "xsurface.h"
 #include "array.h"
+#include "fill.h"
 
 #include <new>
 
@@ -461,7 +462,7 @@ int XSurface::CopyBlockFunc (lua_State* L) {
 	cSurface* dst = cxud->ref->getSurface();
 
 	LPRH rh = xlua_get_run_header(L);
-	LPSURFACE wSurf = WinGetSurface((int)rh->rh4.rh4Mv->mvIdEditWin);
+	cSurface* wSurf = WinGetSurface((int)rh->rh4.rh4Mv->mvIdEditWin);
 
 	if (!wSurf) {
 		luaL_error(L, "Error creating surface object");
@@ -986,7 +987,7 @@ static int NewXLuaSurface (lua_State* L, BaseSurfaceRefFactory* factory, bool in
 
 	if (init) {
 		LPRH rh = xlua_get_run_header(L);
-		LPSURFACE wSurf = WinGetSurface((int)rh->rh4.rh4Mv->mvIdEditWin);
+		cSurface* wSurf = WinGetSurface((int)rh->rh4.rh4Mv->mvIdEditWin);
 
 		if (!wSurf) {
 			luaL_error(L, "Error creating surface object");

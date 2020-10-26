@@ -26,7 +26,7 @@ typedef RUNDATA* LPRDATA;
 // =====================================================================================
 
 class XLuaObject;
-class CRunFrame;
+struct CRunFrame;
 class eventParam;
 
 /**
@@ -118,7 +118,7 @@ public:
 
 	// Source and module loading
 	void				LoadFile (const char* str);
-	void				LoadString (const char* str, const char* sname = 0);
+	void				LoadStringA (const char* str, const char* sname = 0);
 	void				LoadEmbedded (const char* name, LPRDATA rdPtr);
 	void				LoadDefaultLib (LuaPackage pkg);
 	void				LoadCModule (const char* path, const char* name);
